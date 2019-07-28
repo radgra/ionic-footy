@@ -1,33 +1,56 @@
 <ion-card>
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <div text-center>
-              <ion-text>{{match.date | date}}</ion-text>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div text-center>
+            <ion-text>{{match.date | date}}</ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <!-- Home Team -->
+        <ion-col size="5">
+          <div text-center class="small-margin-bottom">
+            <div class="team-info" justify-content-end>
+              <div>{{match.homeTeam.name}}</div>
+              <span class="img-flag" [ngStyle]="{'background-image':'url('+match.homeTeam.flag+')'}" margin-start>
+              </span>
             </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="5">
-            <div text-center>
-              <div class="team-info" justify-content-end>
-                <div>{{match.homeTeam.name}}</div>
-                <span class="img-flag" [ngStyle]="{'background-image':'url('+match.homeTeam.flag+')'}" margin-start>
-                </span>
-              </div>
+          </div>
+          <div *ngFor="let scorer of match.scorersHomeTeam" text-end class="d-flex goal-scorers" align-items-center
+            justify-content-end>
+            <ion-icon name="football" [ngClass]="{'polski-gol':match.homeTeam.name==='Polska'}"></ion-icon>
+            <div class="small-margin" >
+              <span>{{scorer.player.lastName}} </span>
+              <span *ngFor="let minute of scorer.minutes">{{minute}}'</span>
             </div>
-          </ion-col>
-          <ion-col size="2" text-center>
-            {{match.goalsHomeTeam}} : {{match.goalsAwayTeam}}
-          </ion-col>
-          <ion-col size="5" text-center>
+          </div>
+        </ion-col>
+        <!-- Score -->
+        <ion-col size="2" text-center>
+          {{match.goalsHomeTeam}} : {{match.goalsAwayTeam}}
+        </ion-col>
+        <!-- Away Team -->
+        <ion-col size="5" text-center>
+          <div text-center class="small-margin-bottom">
             <div class="team-info" justify-content-start>
               <span class="img-flag" [ngStyle]="{'background-image':'url('+match.awayTeam.flag+')'}" margin-end></span>
               <div>{{match.awayTeam.name}}</div>
             </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
+          </div>
+          <div *ngFor="let scorer of match.scorersAwayTeam" text-start class="d-flex goal-scorers" align-items-center>
+            <ion-icon name="football" [ngClass]="{'polski-gol':match.awayTeam.name==='Polska'}">
+            </ion-icon>
+            <div class="small-margin">
+              <span>{{scorer.player.lastName}} </span>
+              <span *ngFor="let minute of scorer.minutes; let last = last">{{minute}}'
+                <span *ngIf="!last">, </span>
+              </span>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
 </ion-card>

@@ -22,11 +22,11 @@ const matches:Match[] = [
     },
     {
       homeTeam: {
-        flag:"",
+        flag:"/assets/flags/pl.svg",
         name:"Polska"
       },
       awayTeam:{
-        flag:"",
+        flag:"/assets/flags/cm.svg",
         name:"Kamerun"
       },
       date:new Date("07-19-1982"),
@@ -42,11 +42,11 @@ const matches:Match[] = [
     },
     {
       homeTeam: {
-        flag:"",
+        flag:"/assets/flags/pl.svg",
         name:"Polska"
       },
       awayTeam:{
-        flag:"",
+        flag:"/assets/flags/pe.svg",
         name:"Peru"
       },
       date:new Date("07-22-1982"),
@@ -54,8 +54,8 @@ const matches:Match[] = [
         name:"Pierwsza Runda",
         order:1
       },
-      goalsAwayTeam:5,
-      goalsHomeTeam:1,
+      goalsHomeTeam:5,
+      goalsAwayTeam:1,
       scorersHomeTeam:[
         {
           minutes:[55],
@@ -101,11 +101,11 @@ const matches:Match[] = [
     // Polska - Belgia
     {
       homeTeam: {
-        flag:"",
+        flag:"/assets/flags/be.svg",
         name:"Belgia"
       },
       awayTeam:{
-        flag:"",
+        flag:"/assets/flags/pl.svg",
         name:"Polska"
       },
       date:new Date("07-22-1982"),
@@ -113,8 +113,8 @@ const matches:Match[] = [
         name:"Druga Runda",
         order:2
       },
-      goalsAwayTeam:0,
-      goalsHomeTeam:3,
+      goalsHomeTeam:0,
+      goalsAwayTeam:3,
       scorersHomeTeam:[],
       scorersAwayTeam:[
         {
