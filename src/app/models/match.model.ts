@@ -4,7 +4,7 @@ import { Round } from './round.model';
 
 export interface Scorer {
     player:Player
-    minutes:number[]
+    minute:number
 }
 
 

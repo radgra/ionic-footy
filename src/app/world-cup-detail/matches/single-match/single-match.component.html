@@ -23,7 +23,7 @@
             <ion-icon name="football" [ngClass]="{'polski-gol':match.homeTeam.name==='Polska'}"></ion-icon>
             <div class="small-margin" >
               <span>{{scorer.player.lastName}} </span>
-              <span *ngFor="let minute of scorer.minutes">{{minute}}'</span>
+              <span>{{scorer.minute}}'</span>
             </div>
           </div>
         </ion-col>
@@ -44,9 +44,7 @@
             </ion-icon>
             <div class="small-margin">
               <span>{{scorer.player.lastName}} </span>
-              <span *ngFor="let minute of scorer.minutes; let last = last">{{minute}}'
-                <span *ngIf="!last">, </span>
-              </span>
+              <span>{{scorer.minute}}'</span>
             </div>
           </div>
         </ion-col>
