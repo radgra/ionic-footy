@@ -1,5 +1,7 @@
 {
   "name": "polska-pilka-app",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
