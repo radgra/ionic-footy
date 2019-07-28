@@ -33,6 +33,9 @@
             ],
             "styles": [
               {
+                "input":"node_modules/flag-icon-css/css/flag-icon.css"
+              },
+              {
                 "input": "src/theme/variables.scss"
               },
               {

@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/wcs"></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{worldCup?.title}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-content>
+    <ion-tabs>
+      <ion-tab-bar slot="top" color="primary">
+        <ion-tab-button tab="matches">
+          <ion-label>Mecze</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="squad">
+          <ion-label>Kadra</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="tables">
+          <ion-label>Tabele</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,13 @@
+.img-flag {
+    // background-image: url("/assets/flags/pl.svg");
+    display: block;
+    background-size: cover;
+    height: 20px;
+    width: 30px;
+    border: 1px solid #b0b0b0;
+    background-position: center center;
+}
+
+.team-info {
+    display:flex;
+}

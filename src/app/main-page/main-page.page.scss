@@ -1,0 +1,19 @@
+.title-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--text-primary-color);
+    height:100%;
+    h1 {
+        font-size:22px;
+    }
+}
+.image-overlay {
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+ion-card-content {
+    padding:0;
+}

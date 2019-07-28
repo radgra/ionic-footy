@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Polacy na MS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let wc of worldCups" [routerLink]="['/','wcs',wc.year]">     
+        <ion-card-content [ngStyle]="getStyles(wc)">
+          <div class="image-overlay">
+            <div class="title-container">
+              <h1>{{wc.title}}</h1>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
