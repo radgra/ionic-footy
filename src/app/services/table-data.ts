@@ -25,7 +25,7 @@ export const tableData = [
     },
     {
         team:"Kostaryka",
-        position:2,
+        position:3,
         points:4,
         goalsScored:5,
         goalsConceded:4,
@@ -37,7 +37,7 @@ export const tableData = [
     },
     {
         team:"Urugwaj",
-        position:2,
+        position:4,
         points:4,
         goalsScored:5,
         goalsConceded:4,

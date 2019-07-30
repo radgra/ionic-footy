@@ -1,226 +1,100 @@
 <ion-content>
-    <div>
-        <ion-grid>
-            <ion-row>
-                <ion-col padding-start>
-                    <h3>Pierwsza Runda</h3>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
-    <ion-card>
-        <ion-card-content no-padding>
-            <div class="list-header">
-                <ion-list-header no-padding padding-end>
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col size="1" text-center>
-                                <span>Pz</span>
-                            </ion-col>
-                            <ion-col size="5">
-                                <span>Druzyna</span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>Pkt</span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>G</span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>GS</span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>Z</span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>R</span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>P</span>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-list-header>
+    <ng-container *ngIf="tables">
+        <ng-container *ngFor="let table of tables">
+            <div>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col padding-start>
+                            <h3>{{table.round}}</h3>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
             </div>
-            <ion-list no-padding>
-                <ion-item no-padding>
-                    <ion-grid>
-                        <ion-row align-items-center>
-                            <ion-col size="1" text-center>
-                                <span>1</span>
-                            </ion-col>
-                            <ion-col size="5">
-                                <span>
-                                    Polska
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    6
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    8
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    4
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    2
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    1
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    0
-                                </span>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-item>
-                <ion-item no-padding>
-                    <ion-grid>
-                        <ion-row align-items-center>
-                            <ion-col size="1" text-center>
-                                <span>1</span>
-                            </ion-col>
-                            <ion-col size="5">
-                                <span>
-                                    Polska
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    6
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    8
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    4
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    2
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    1
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    0
-                                </span>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-item>
-                <ion-item no-padding>
-                    <ion-grid>
-                        <ion-row align-items-center>
-                            <ion-col size="1" text-center>
-                                <span>1</span>
-                            </ion-col>
-                            <ion-col size="5">
-                                <span>
-                                    Polska
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    6
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    8
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    4
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    2
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    1
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    0
-                                </span>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-item>
-                <ion-item no-padding>
-                    <ion-grid>
-                        <ion-row align-items-center>
-                            <ion-col size="1" text-center>
-                                <span>1</span>
-                            </ion-col>
-                            <ion-col size="5">
-                                <span>
-                                    Polska
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    6
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    8
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    4
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    2
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    1
-                                </span>
-                            </ion-col>
-                            <ion-col size="1" text-center>
-                                <span>
-                                    0
-                                </span>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-item>
-            </ion-list>
-
-        </ion-card-content>
-    </ion-card>
+            <ion-card>
+                <ion-card-content no-padding>
+                    <div class="list-header">
+                        <ion-list-header no-padding padding-end>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col size="1" text-center>
+                                        <span>Pz</span>
+                                    </ion-col>
+                                    <ion-col size="5">
+                                        <span>Druzyna</span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>Pkt</span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>G</span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>GS</span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>Z</span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>R</span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>P</span>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-list-header>
+                    </div>
+                    <ion-list no-padding>
+                        <ion-item no-padding *ngFor="let team of table.table">
+                            <ion-grid>
+                                <ion-row align-items-center>
+                                    <ion-col size="1" text-center>
+                                        <span>{{team.position}}</span>
+                                    </ion-col>
+                                    <ion-col size="5">
+                                        <span>
+                                            {{team.team}}
+                                        </span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>
+                                                {{team.points}}
+                                        </span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>
+                                                {{team.goalsScored}}
+                                        </span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>
+                                                {{team.goalsConceded}}
+                                        </span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>
+                                                {{team.wins}}
+                                            
+                                        </span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>
+                                                {{team.draws}}
+                                            
+                                        </span>
+                                    </ion-col>
+                                    <ion-col size="1" text-center>
+                                        <span>
+                                                {{team.loses}}
+                                            
+                                        </span>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-item>
+                    </ion-list>
+                </ion-card-content>
+            </ion-card>
+        </ng-container>
+    </ng-container>
 </ion-content>

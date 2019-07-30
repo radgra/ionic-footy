@@ -23,6 +23,7 @@ export class SquadService {
   getSquadForWorldCup(year:number): Observable<SquadView> {
     const squadForWc = this.squad.filter(sq => sq.year === year)
     
+    // Pozniej trzeba znalesc operator ktory rozbija array na pojedncze czastki
     return from(squadForWc).pipe(
       groupBy(player => player.position),
       mergeMap(group => {
