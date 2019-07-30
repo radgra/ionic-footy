@@ -1,0 +1,15 @@
+.list-header {
+    background-color:var(--ion-color-secondary);
+    color:white;
+    font-size:11px;
+    // padding-left:0.5rem;
+}
+
+.list-header ion-list-header {
+    font-size:11px;
+    color:white;
+}
+
+ion-item{
+    --ion-background-color:#fff;
+ }

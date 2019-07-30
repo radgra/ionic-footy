@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { WcSquadPage } from './wc-squad.page';
+import { PlayerPositionListComponent } from './player-position-list/player-position-list.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [WcSquadPage]
+  declarations: [WcSquadPage, PlayerPositionListComponent]
 })
 export class WcSquadPageModule {}

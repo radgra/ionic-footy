@@ -104,7 +104,7 @@ export const squad:Squad[] = [
     {
         player:{
             id:2,
-            born:new Date("19-12-1955"),
+            born:new Date("10-12-1955"),
             lastName:"Dziuba",
             firstName:"Marek"
         },
