@@ -14,7 +14,7 @@
           <div text-center class="small-margin-bottom">
             <div class="team-info" justify-content-end>
               <div>{{match.homeTeam.name}}</div>
-              <span class="img-flag" [ngStyle]="{'background-image':'url('+match.homeTeam.flag+')'}" margin-start>
+              <span class="img-flag" [ngClass]="match.homeTeam.name.toLowerCase()+'-flag'" margin-start>
               </span>
             </div>
           </div>
@@ -35,7 +35,7 @@
         <ion-col size="5" text-center>
           <div text-center class="small-margin-bottom">
             <div class="team-info" justify-content-start>
-              <span class="img-flag" [ngStyle]="{'background-image':'url('+match.awayTeam.flag+')'}" margin-end></span>
+              <span class="img-flag" [ngClass]="match.awayTeam.name.toLowerCase()+'-flag'" margin-end></span>
               <div>{{match.awayTeam.name}}</div>
             </div>
           </div>

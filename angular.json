@@ -40,6 +40,9 @@
               },
               {
                 "input": "src/global.scss"
+              },
+              {
+                "input": "src/flags.scss"
               }
             ],
             "scripts": []
