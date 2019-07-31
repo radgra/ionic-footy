@@ -15,7 +15,7 @@ export const Records:Stats[] = [
     },
     {
         player: {
-            id: 2,
+            id: 2, 
             born: new Date("10-12-1955"),
             lastName: "Dziuba",
             firstName: "Marek"
