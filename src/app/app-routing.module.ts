@@ -7,7 +7,8 @@ const routes: Routes = [
       { path: "", loadChildren: './main-page/main-page.module#MainPagePageModule' },
       { path: ':year', loadChildren: './world-cup-detail/world-cup-detail.module#WorldCupDetailPageModule' },
     ]
-  },
+  },  { path: 'stats', loadChildren: './stats/stats.module#StatsPageModule' },
+
 
 ];
 
