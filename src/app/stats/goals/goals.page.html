@@ -1,0 +1,56 @@
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-text>Polacy z najwieksza iloscia goli.</ion-text>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ng-container *ngIf="stats">
+        <ion-list>
+            <div class="list-header">
+                <ion-list-header padding-end>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="1">
+                                <span>Pz</span>
+                            </ion-col>
+                            <ion-col size="7">
+                                <span>Zawodnik</span>
+                            </ion-col>
+                            <ion-col size="2" text-center>
+                                <span>Gole</span>
+                            </ion-col>
+                            <ion-col size="2" text-center>
+                                <span>Mecze</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-list-header>
+            </div>
+            <ion-item class="player-item" *ngFor="let player of stats">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="1">
+                            <span class="position-text">{{player.goalsRanking}}</span>
+                        </ion-col>
+                        <ion-col size="7">
+                            <div>
+                                <span class="player-name">{{player.player.firstName}} {{player.player.lastName}}</span>
+                            </div>
+                            <div class="born-date">
+                                <span>{{player.player.born | date:"dd.MM.yyyy"}}</span>
+                            </div>
+                        </ion-col>
+                        <ion-col size="2" text-center>
+                            <span>{{player.goals}}</span>
+                        </ion-col>
+                        <ion-col size="2" text-center>
+                            <span>{{player.appearances}}</span>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+        </ion-list>
+    </ng-container>
+</ion-content>

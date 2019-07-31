@@ -9,8 +9,14 @@ import { StatsPage } from './stats.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: StatsPage
+    path: '', redirectTo:"tabs/goals", pathMatch:"full"},
+  {
+    path:'tabs',
+    component:StatsPage,
+    children:[
+      {path:"goals", loadChildren:'./stats/goals/goals.module#GoalsPageModule'},
+      { path: 'played', loadChildren: './stats/played/played.module#PlayedPageModule' },
+    ]
   }
 ];
 
@@ -24,3 +30,4 @@ const routes: Routes = [
   declarations: [StatsPage]
 })
 export class StatsPageModule {}
+
