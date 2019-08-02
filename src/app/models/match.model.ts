@@ -1,6 +1,7 @@
 import { Player } from './player.model';
 import { Team } from './team.model';
 import { Round } from './round.model';
+import { Goal } from './goal.model';
 
 export interface Scorer {
     player:Player
@@ -18,4 +19,5 @@ export interface Match {
     date:Date
     scorersHomeTeam:Scorer[]
     scorersAwayTeam:Scorer[]
+    goals?:Goal[]
 }

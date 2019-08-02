@@ -4,10 +4,12 @@ import {matches} from './matches-data'
 import { of, Observable } from 'rxjs';
 import { Round } from '../models/round.model';
 import { groupBy} from 'lodash'
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 export interface SortedMatches {
-  round:Round,
+  positon:Round,
   matches:Match[]
 }
 
@@ -17,27 +19,39 @@ export interface SortedMatches {
 export class MatchesService {
   matches:Match[] = matches
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   getMatchesForWorldCup(year:number) : Observable<{matches:Match[], order:number}[]> {
-    const filteredMatches = this.matches.filter(match => match.worldCupYear === year)
+    // Teoretyzcznie nie musze tak filtrowac bo moge to zrobic na backendzie - query based on stages/nested matches
 
-    return of(filteredMatches).pipe(
-      map(this._transformMatches.bind(this))
-    )
+    // MUSZE fetchowac matche tylko z konkretnego WorldCup i przetestowac czy dziala grouping
+    const params = new HttpParams().set('year', ''+year)
+  
+    return this.http.get(`${environment.url}/matches`,{params}).pipe(
+      map((data:any) => data.data),
+      map(this._transformMatches.bind(this)),
+      )
+      
+      
+    // const filteredMatches = this.matches.filter(match => match.worldCupYear === year)
+    // return of(filteredMatches).pipe(
+    //   map(this._transformMatches.bind(this))
+    // )
   }
   
-  private _transformMatches(matches:Match[]) : {matches:Match[], order:number}[] {
+  private _transformMatches(matches:Match[]) : {matches:Match[], position:number}[] {
     const groupedMatchesObj = (groupBy(matches,(match) => {
-      return match.round.order
+      return match.stage.position
     }))
 
     const groupedMatches = Object.keys(groupedMatchesObj).map(key => {
-      const obj = {matches:groupedMatchesObj[key],order:+key}
+      const obj = {matches:groupedMatchesObj[key],position:+key}
       return obj
     })
     
-    return groupedMatches.sort((prev,next) => prev.order > next.order ? 1 : -1)
+    return groupedMatches.sort((prev,next) => prev.position > next.position ? 1 : -1)
   }
+
+
 
 }

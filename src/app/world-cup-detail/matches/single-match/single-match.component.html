@@ -18,7 +18,7 @@
               </span>
             </div>
           </div>
-          <div *ngFor="let scorer of match.scorersHomeTeam" text-end class="d-flex goal-scorers" align-items-center
+          <div *ngFor="let scorer of match.goals | matchGoals:'home'" text-end class="d-flex goal-scorers" align-items-center
             justify-content-end>
             <ion-icon name="football" [ngClass]="{'polski-gol':match.homeTeam.name==='Polska'}"></ion-icon>
             <div class="small-margin" >
@@ -39,7 +39,7 @@
               <div>{{match.awayTeam.name}}</div>
             </div>
           </div>
-          <div *ngFor="let scorer of match.scorersAwayTeam" text-start class="d-flex goal-scorers" align-items-center>
+          <div *ngFor="let scorer of match.goals | matchGoals:'away'" text-start class="d-flex goal-scorers" align-items-center>
             <ion-icon name="football" [ngClass]="{'polski-gol':match.awayTeam.name==='Polska'}">
             </ion-icon>
             <div class="small-margin">

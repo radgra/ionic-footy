@@ -14,8 +14,8 @@ const routes: Routes = [
     path:'tabs',
     component:StatsPage,
     children:[
-      {path:"goals", loadChildren:'./stats/goals/goals.module#GoalsPageModule'},
-      { path: 'played', loadChildren: './stats/played/played.module#PlayedPageModule' },
+      {path:"goals", loadChildren:'./goals/goals.module#GoalsPageModule'},
+      { path: 'played', loadChildren: './played/played.module#PlayedPageModule' },
     ]
   }
 ];

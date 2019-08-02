@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MatchesPage } from './matches.page';
+import { MatchGoalsPipe } from 'src/app/pipes/match-goals.pipe';
 
 const routes: Routes = [
   {
@@ -22,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MatchesPage, SingleMatchComponent]
+  declarations: [MatchesPage, SingleMatchComponent, MatchGoalsPipe]
 })
 export class MatchesPageModule {}

@@ -2,7 +2,7 @@
 <ng-container *ngFor="let matchGroup of matchesGroup">
     <ng-container *ngIf="matchGroup.matches && matchGroup.matches.length > 0">
         <div padding-start>
-            <h4>{{matchGroup.matches[0]?.round.name}}</h4>
+            <h4>{{matchGroup.matches[0]?.stage.name}}</h4>
         </div>
         <app-single-match [match]="match" *ngFor="let match of matchGroup.matches"></app-single-match>
     </ng-container>
