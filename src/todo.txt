@@ -1,2 +1,0 @@
-DONE 1 Nie potrzebuje flag na resource bo appka bierze to z nazwy Druzyny
-2. Squad Service

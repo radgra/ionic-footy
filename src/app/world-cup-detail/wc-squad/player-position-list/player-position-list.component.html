@@ -11,7 +11,7 @@
     <ion-item *ngFor="let pl of playersList">
         <ion-grid>
             <ion-row align-items-center>
-                <ion-col size="6">
+                <ion-col size="8">
                     <span>
                         {{pl.player.firstName}} {{pl.player.lastName}}
                     </span>
@@ -23,9 +23,6 @@
                 </ion-col>
                 <ion-col size="2" text-center>
                     <span>{{pl.goals}}</span>
-                </ion-col>
-                <ion-col size="2" text-center>
-                    <span>{{pl.player.born | date:"yyyy"}}</span>
                 </ion-col>
             </ion-row>
         </ion-grid>

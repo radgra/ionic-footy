@@ -3,26 +3,23 @@
         <ion-list-header padding-end>
             <ion-grid>
                 <ion-row>
-                    <ion-col size="6">
-                        <span>Zawodnik</span>
+                    <ion-col size="8">
+                        <span class="player-column">Player</span>
                     </ion-col>
                     <ion-col size="2" text-center>
-                        <span>Mecze</span>
+                        <span>Games</span>
                     </ion-col>
                     <ion-col size="2" text-center>
-                        <span>Gole</span>
-                    </ion-col>
-                    <ion-col size="2" text-center>
-                        <span>Wiek</span>
+                        <span>Goals</span>
                     </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-list-header>
     </div>
     <ng-container *ngIf="squad">
-        <app-player-position-list [playersList]="squad.bramkarz" positionName="Bramkarze"></app-player-position-list>
-        <app-player-position-list [playersList]="squad.obronca" positionName="Obroncy"></app-player-position-list>
-        <app-player-position-list [playersList]="squad.pomocnik" positionName="Pomocnicy"></app-player-position-list>
-        <app-player-position-list [playersList]="squad.napastnik" positionName="Napastnicy"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.goalkeeper" positionName="Bramkarze"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.defender" positionName="Obroncy"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.midfielder" positionName="Pomocnicy"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.forward" positionName="Napastnicy"></app-player-position-list>
     </ng-container>
 </ion-content>

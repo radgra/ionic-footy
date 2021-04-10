@@ -1,5 +1,5 @@
 export interface TableModel {
-    team:string;
+    team:{name:string};
     position:number,
     points:number,
     goalsScored:number,
@@ -8,5 +8,6 @@ export interface TableModel {
     draws:number,
     loses:number,
     year:number,
-    round:string
+    round:string,
+    stage:{name:string, position:number}
 }

@@ -13,3 +13,18 @@
 ion-item{
     --ion-background-color:#fff;
  }
+
+ 
+ion-item {
+    --inner-padding-end: 0px;
+    font-size: 15px;
+}
+
+
+ion-list-header {
+    --ion-padding:0px;
+}
+
+ion-card {
+    margin-top: 0px;
+}

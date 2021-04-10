@@ -18,3 +18,12 @@ ion-item{
 .cs-text-center {
     text-align: center;
 }
+
+.player-column {
+    padding-left:1rem;
+}
+
+ion-list-header {
+    --ion-padding:0px;
+    padding-inline-start: 0px;
+}
