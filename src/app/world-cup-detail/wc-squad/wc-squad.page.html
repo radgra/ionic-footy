@@ -17,9 +17,9 @@
         </ion-list-header>
     </div>
     <ng-container *ngIf="squad">
-        <app-player-position-list [playersList]="squad.goalkeeper" positionName="Bramkarze"></app-player-position-list>
-        <app-player-position-list [playersList]="squad.defender" positionName="Obroncy"></app-player-position-list>
-        <app-player-position-list [playersList]="squad.midfielder" positionName="Pomocnicy"></app-player-position-list>
-        <app-player-position-list [playersList]="squad.forward" positionName="Napastnicy"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.goalkeeper" positionName="Goalkeepers"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.defender" positionName="Defenders"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.midfielder" positionName="Midfielders"></app-player-position-list>
+        <app-player-position-list [playersList]="squad.forward" positionName="Forwards"></app-player-position-list>
     </ng-container>
 </ion-content>
