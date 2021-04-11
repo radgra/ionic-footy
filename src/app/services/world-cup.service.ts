@@ -7,31 +7,47 @@ import { Injectable } from '@angular/core';
 export class WorldCupService {
   worldCups = [
     {
-      title:"Niemcy 2006",
-      image:"assets/2006.jpg",
+      title:"Russia 2018",
+      image:"assets/2018logo.png",
+      year:2018
+    },
+    {
+      title:"Germany 2006",
+      image:"assets/2006logo.png",
       year:2006
     },
     {
-      title:"Korea i Japonia 2002",
-      image:"assets/2002.jpg",
+      title:"Korea and Japan 2002",
+      image:"assets/2002logo.png",
       year:2002
     },
     {
-      title:"Meksyk 1986",
-      image:"assets/1986.jpg",
+      title:"Mexico 1986",
+      image:"assets/1986logo.png",
       year:1986      
     },
     {
-      title:"Hiszpania 1982",
-      image:"assets/1982.jpg",
+      title:"Spain 1982",
+      image:"assets/1982logo.png",
       year:1982
       
     },
     {
-      title:"Argentyna 1978",
-      image:"assets/1986.jpg",
+      title:"Argentina 1978",
+      image:"assets/1978.png",
       year:1978
     },
+    {
+      title:"West Germany 1974",
+      image:"assets/1974.png",
+      year:1974
+    },
+    {
+      title:"France 1938",
+      image:"assets/1938.jpg",
+      year:1938
+    },
+    
   ]
 
   constructor() { }

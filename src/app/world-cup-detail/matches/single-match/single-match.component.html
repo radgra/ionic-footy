@@ -18,14 +18,6 @@
               </span>
             </div>
           </div>
-          <div *ngFor="let scorer of match.goals | matchGoals:'home'" text-end class="d-flex goal-scorers" align-items-center
-            justify-content-end>
-            <ion-icon name="football" [ngClass]="{'polski-gol':match.homeTeam.name==='Polska'}"></ion-icon>
-            <div class="small-margin" >
-              <span>{{scorer.player.lastName}} </span>
-              <span>{{scorer.minute}}'</span>
-            </div>
-          </div>
         </ion-col>
         <!-- Score -->
         <ion-col size="2" text-center>
@@ -39,8 +31,26 @@
               <div>{{match.awayTeam.name}}</div>
             </div>
           </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5">
+          <div *ngFor="let scorer of match.goals | matchGoals:'home'" text-end class="d-flex goal-scorers" align-items-center
+            justify-content-end>
+            <ion-icon name="football" [ngClass]="{'polski-gol':match.homeTeam.name==='Polska'}"></ion-icon>
+            <div class="small-margin" >
+              <span>{{scorer.player.lastName}} </span>
+              <span>{{scorer.minute}}'</span>
+            </div>
+          </div>
+        </ion-col>
+        <!-- Score -->
+        <ion-col size="2" text-center>
+        </ion-col>
+        <!-- Away Team -->
+        <ion-col size="5" text-center>
           <div *ngFor="let scorer of match.goals | matchGoals:'away'" text-start class="d-flex goal-scorers" align-items-center>
-            <ion-icon name="football" [ngClass]="{'polski-gol':match.awayTeam.name==='Polska'}">
+            <ion-icon name="football" [ngClass]="{'polish-goal':match.awayTeam.name==='Poland'}">
             </ion-icon>
             <div class="small-margin">
               <span>{{scorer.player.lastName}} </span>

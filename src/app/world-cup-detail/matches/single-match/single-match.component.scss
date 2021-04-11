@@ -10,7 +10,7 @@
 
 .team-info {
     display:flex;
-    // align-items: center;
+    align-items: center;
 }
 
 .d-flex {
@@ -29,10 +29,15 @@
     margin-bottom: 0.3rem;
 }
 
-.polski-gol {
+.polish-goal {
     color:var(--ion-color-primary);
 }
 
-// .score-row {
-//     align-items: center;
-// }
+.score-row {
+    align-items: center;
+}
+
+ion-card-content {
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+}
