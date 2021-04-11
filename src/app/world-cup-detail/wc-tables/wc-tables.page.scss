@@ -20,6 +20,11 @@ ion-item {
     font-size: 15px;
 }
 
+@media only screen and (max-width: 320px) { 
+    ion-item {
+        font-size: 11px;
+    }   
+}
 
 ion-list-header {
     --ion-padding:0px;

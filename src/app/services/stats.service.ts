@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Stats } from '../models/stats.model';
 import { Records } from './records-data';
 import { of } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,20 +12,29 @@ import { of } from 'rxjs';
 export class StatsService {
   stats:Stats[] = Records
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   getAppearanceStats() {
-    const apperanceStats = this.stats.filter(stat => stat.appearencesRanking !== null)
-    const sortedAppear =  apperanceStats.sort((a,b) => a.appearencesRanking > b.appearencesRanking ? 1 : -1)
-    
-    return of(sortedAppear)
+    const params = new HttpParams().set('type', 'matches')
+  
+    return this.http.get(`${environment.url}/stats`,{params}).pipe(
+      map((data:any) => data.data),
+      // map((stats:Stats[]) => {
+      //   return stats.sort((a,b) => a.position - b.position)
+      // })
+      )
   }
 
   getGoalsStats() {
-    const goalsStats = this.stats.filter(stat => stat.goalsRanking !== null)
-    const sortedGoals =  goalsStats.sort((a,b) => a.goalsRanking > b.goalsRanking ? 1 : -1)
-    
-    return of(sortedGoals)
+    const params = new HttpParams().set('type', 'goals')
+  
+    return this.http.get(`${environment.url}/stats`,{params}).pipe(
+      map((data:any) => data.data),
+      // map((stats:Stats[]) => {
+      //   return stats.sort((a,b) => a.position - b.position)
+      // })
+      )
+      
   }
 
 }

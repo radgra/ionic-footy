@@ -27,3 +27,9 @@ ion-list-header {
     --ion-padding:0px;
     padding-inline-start: 0px;
 }
+
+@media only screen and (max-width: 320px) { 
+    ion-list-header {
+        font-size: 10px;
+    }
+}
