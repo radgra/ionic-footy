@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Stats } from '../models/stats.model';
-import { Records } from './records-data';
 import { of } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -10,7 +9,6 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class StatsService {
-  stats:Stats[] = Records
 
   constructor(private http:HttpClient) { }
 
