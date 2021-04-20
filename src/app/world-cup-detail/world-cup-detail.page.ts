@@ -18,13 +18,11 @@ export class WorldCupDetailPage implements OnInit {
 
     this.route.paramMap.pipe(
       tap(params => {
-        console.log(params)
         if(!params.has('year')) {
           this.router.navigateByUrl('/')
       }}),
       switchMap(params => {
         const wcYear =  +params.get('year')
-        console.log(wcYear)
         return this.worldCupService.getWorldCup(wcYear)
       }),
       tap(worldCup => {

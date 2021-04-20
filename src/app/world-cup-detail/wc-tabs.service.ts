@@ -6,13 +6,11 @@ import { BehaviorSubject, Subject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WcTabsService {
-  private selectedWorldCup:WorldCup
   private $wcSelected:BehaviorSubject<WorldCup> = new BehaviorSubject(null)
 
   constructor() { }
 
   setWorldCup(worldCup:WorldCup) {
-    this.selectedWorldCup = worldCup
     this.$wcSelected.next(worldCup)
   }
 

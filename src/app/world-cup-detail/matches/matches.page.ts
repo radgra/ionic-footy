@@ -18,9 +18,7 @@ export class MatchesPage implements OnInit, OnDestroy {
   matchesGroup:{matches:Match[], order:number}[]
   tabsSub:Subscription
 
-  constructor(private worldCupService:WorldCupService, private matchesService:MatchesService,
-              private route:ActivatedRoute, 
-              private router:Router, private tabsService:WcTabsService) { }
+  constructor(private matchesService:MatchesService, private tabsService:WcTabsService) { }
 
   ngOnInit() {
     this.tabsSub = this.tabsService.worldCupChanges().pipe(

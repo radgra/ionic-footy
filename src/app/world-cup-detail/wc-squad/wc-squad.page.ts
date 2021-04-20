@@ -4,7 +4,6 @@ import { WcTabsService } from '../wc-tabs.service';
 import { Subscription } from 'rxjs';
 import { WorldCup } from 'src/app/models/worldCup.model';
 import { switchMap, tap } from 'rxjs/operators';
-import { squad } from 'src/app/services/player-data';
 
 @Component({
   selector: 'app-wc-squad',
@@ -25,9 +24,7 @@ export class WcSquadPage implements OnInit {
         return this.squadService.getSquadForWorldCup(wc.year)
       }),
       tap(squad => {
-        this.squad = squad 
-        console.log(squad);
-        
+        this.squad = squad         
       })
     ).subscribe()
   }

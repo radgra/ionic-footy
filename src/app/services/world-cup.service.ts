@@ -55,8 +55,9 @@ export class WorldCupService {
   getWorldCups() {
     return of(this.worldCups)
   }
-
+  
   getWorldCup(year:Number) {
+    //Todo - how to do pattern load only once with rxjs
     const foundWc = this.worldCups.find(wc => wc.year === year)
     return of(foundWc)
   }

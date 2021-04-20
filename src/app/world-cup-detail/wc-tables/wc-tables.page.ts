@@ -25,7 +25,6 @@ export class WcTablesPage implements OnInit {
       }),
       tap(tables => {
         this.tables = tables 
-        console.log(tables)
       })
     ).subscribe()
   }

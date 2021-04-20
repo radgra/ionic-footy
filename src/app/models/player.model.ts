@@ -9,7 +9,7 @@ export interface Player {
 
 
 // M2M worldcup/player
-type Position = "Bramkarz" | "Obronca" | "Pomocnik" | "Napastnik"; 
+type Position = "Goalkeeper" | "Defender" | "Midfielder" | "Forward"; 
 export interface Squad {
     player:Player
     year:number
